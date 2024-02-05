@@ -1,0 +1,38 @@
+@import 'variables';
+
+
+.heading {
+    font-size: 25px;
+    font-family: avenir-regular;
+}
+
+.main {
+    font-family: avenir-regular;
+    padding: 20px 16px;
+
+    &__heading {
+        font-size: 25px;
+        font-family: avenir-demi;
+        padding-bottom: 16px;
+    }
+
+    & h4 {
+        font-size: 18px;
+        padding: 1rem 0;
+    }
+
+    &__container-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__image {
+        max-width: 100%;
+    }
+
+    h5 {
+        font-size: 18px;
+        font-family: avenir-demi;
+    }
+}

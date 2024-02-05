@@ -1,133 +1,27 @@
+@import 'variables';
+@import 'mixins';
+@import 'header';
+@import 'hero';
+@import 'main';
+@import 'photo-gallery';
+@import 'footer';
+
 * {
     border: 0;
     margin: 0;
+
     @font-face {
         font-family: avenir-regular;
         src: url("/assets/fonts/AvenirNextLTPro-Regular.otf");
     }
-    
+
     @font-face {
         font-family: avenir-demi;
         src: url("/assets/fonts/AvenirNextLTPro-Demi.otf");
     }
-    
+
     @font-face {
         font-family: avenir-bold;
         src: url("/assets/fonts/AvenirNextLTPro-Bold.otf");
     }
-}
-
-$bandsite-black: #323232;
-$silver: #AFAFAF;
-$white: #323232;
-$bandsite-darkblack: #000000;
-$mercury: #E1E1E1;
-$alabaster: #FAFAFA;
-
-@font-face {
-    font-family: avenir-regular;
-    src: url("/assets/fonts/AvenirNextLTPro-Regular.otf");
-}
-
-@font-face {
-    font-family: avenir-demi;
-    src: url("/assets/fonts/AvenirNextLTPro-Demi.otf");
-}
-
-@font-face {
-    font-family: avenir-bold;
-    src: url("/assets/fonts/AvenirNextLTPro-Bold.otf");
-}
-
-.header {
-    height: 100px;
-    width: 100vw;
-    background-color: #323232;
-    color: white;
-    justify-content: center;
-    align-self: center;
-    font-family: avenir-regular;
-
-    &__logo-container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding: 1.2rem;
-        }
-
-    &__menu {
-        display: flex;
-        justify-content: space-between;
-        list-style: none;
-        padding: 0 75px;
-    
-        li {
-            position: relative;
-
-            &:hover,
-            &:active {
-                &::after {
-                    content: '';
-                    position: absolute;
-                    width: 100%;
-                    height: 2px;
-                    background-color: white;
-                    bottom: 0;
-                    left: 0;
-                    font-weight: bold;
-                }
-            }
-        }
-    }
-}
-
-.hero {
-    position: relative;
-    background-image: url("/assets/images/hero-bio.jpg");
-    background-size: cover;
-    background-position: center;
-    width: 100%;
-    height: 250px;
-    font-family: avenir-regular;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    padding-left: 16px;
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-    
-    h1, p {
-        position: relative;
-        z-index: 1;
-    }
-}
-
-.main {
-    &__heading {
-        font-family: avenir-regular;
-        font-size: 25px;
-        font-weight: bold;
-        padding: 16px;
-    }
-
-    &__image {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            justify-items: center;
-            height: 100%;
-            width: 90%;
-    }
-
-
-
 }
