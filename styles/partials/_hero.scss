@@ -1,6 +1,7 @@
-@import 'variables';
+@import './variables';
 
 .hero {
+    
     position: relative;
     background-image: url("/assets/images/hero-bio.jpg");
     background-size: cover;
@@ -14,7 +15,7 @@
     align-items: center;
     color: white;
     
-    &__text{
+    &__text {
         font-family: avenir-regular;
         padding-left: 16px;
 

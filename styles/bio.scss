@@ -1,10 +1,10 @@
-@import 'variables';
-@import 'mixins';
-@import 'header';
-@import 'hero';
-@import 'main';
-@import 'photo-gallery';
-@import 'footer';
+@import './partials/variables';
+@import './partials/mixins';
+@import './partials/header';
+@import './partials/hero';
+@import './partials/main';
+@import './partials/photo-gallery';
+@import './partials/footer';
 
 * {
     border: 0;
