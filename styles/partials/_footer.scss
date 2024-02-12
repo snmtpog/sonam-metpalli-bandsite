@@ -1,5 +1,5 @@
-@import './variables';
-@import './mixins';
+@use './variables';
+@use './mixins';
 
 .footer__container {
     display: flex;
@@ -10,8 +10,43 @@
     width: 100vw;
     max-width: 100%;
     font-family: avenir-regular;
+    padding: 16px 0;
 
-    &--top, &--middle, &--bottom {
+    &--top {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        display: block;
+
+        @include tablet {
+                display: flex;
+                box-sizing: border-box;
+
+                h1 {
+                    margin-right: 2rem;
+                }
+        }
+
+    //     @include desktop {
+    //         display: flex;
+    //         flex-direction: row;
+    // }
+        }
+
+    &--middle {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 1rem;
+        display: block;
+
+        @include tablet {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+    }
+    }
+
+    &--bottom {
         width: 100%;
         box-sizing: border-box;
         padding: 1rem;
@@ -27,20 +62,23 @@
         align-items: center;
     }
 
-    .footer__container--middle {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+    // .footer__container--middle {
+    //     display: flex;
+    //     flex-direction: column;
+    //     justify-content: space-between;
     }
 
-    &--section {
-        display: flex;
-        justify-content: space-evenly;
-        justify-content: center;
-        align-items: center;
-    }
+    // &--section {
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
 
-}
+        // &-bold {
+        //     font-weight: avenir-bold;
+        // }
+//     }
+
+// }
 
 .icons {
     display: flex;
