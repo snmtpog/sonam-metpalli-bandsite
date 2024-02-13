@@ -1,153 +1,250 @@
-@use './partials/variables';
-@use './partials/mixins';
-@use './partials/header';
-@use './partials/footer';
-@use './partials/shows';
-
-
+// Fonts
 @font-face {
-    font-family: avenir-regular;
-    src: url("/assets/fonts/AvenirNextLTPro-Regular.otf");
+font-family: avenir-regular;
+src: url("/assets/fonts/AvenirNextLTPro-Regular.otf");
 }
 
 @font-face {
-    font-family: avenir-demi;
-    src: url("/assets/fonts/AvenirNextLTPro-Demi.otf");
+font-family: avenir-demi;
+src: url("/assets/fonts/AvenirNextLTPro-Demi.otf");
 }
 
 @font-face {
-    font-family: avenir-bold;
-    src: url("/assets/fonts/AvenirNextLTPro-Bold.otf");
+font-family: avenir-bold;
+src: url("/assets/fonts/AvenirNextLTPro-Bold.otf");
 }
 
-.header {
-    height: 200px;
-    width: 100vw;
-    max-width: 100%;
-    background-color: green;
-    color: $mercury;
-    font-family: avenir-regular;
-    display: flex;
-}
-
-
+// General Styles
 * {
-    font-family: avenir-regular;
-    
-    .heading {
-        font-family: avenir-bold;
-        font-size: 25px;
-    }
-
-    border: 0;
-    margin: 0;
+border: 0;
+margin: 0;
 }
 
+h1 {
+font-family: avenir-demi;
+font-size: 25px;
+}
+
+// Header Styles
+.header {
+height: 100px;
+width: 100vw;
+max-width: 100%;
+background-color: #323232;
+color: #e1e1e1;
+font-family: avenir-regular;
+display: flex;
+justify-content: space-between;
+align-items: center;
+flex-direction: column;
+
+@media (min-width: 768px) and (max-width: 1279px) {
+    height: 60px;
+}
+}
+
+.header__logo {
+padding: 1rem;
+}
+
+.header__nav {
+display: flex;
+}
+
+.header__nav-links {
+list-style: none;
+padding: 0;
+display: flex;
+}
+
+.header__nav-link {
+padding: 15px;
+text-align: center;
+color: #e1e1e1;
+text-decoration: none;
+
+&:hover {
+    color: #fff;
+}
+
+&--active {
+    color: #fff;
+    font-weight: bold;
+}
+}
+
+// Footer Styles
+.footer__container {
+display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+background-color: #323232;
+color: white;
+width: 100vw;
+max-width: 100%;
+font-family: avenir-regular;
+padding: 16px 0;
+
+&--top {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: block;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    box-sizing: border-box;
+    h1 {
+        margin-right: 2rem;
+    }
+    }
+}
+
+&--middle {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: block;
+
+    @media (min-width: 768px) and (max-width: 1279px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    }
+}
+
+&--bottom {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1rem;
+    display: block;
+}
+}
+
+.footer__container .photo {
+max-width: 100%;
+height: auto;
+padding-right: 2rem;
+display: inline;
+justify-content: center;
+align-items: center;
+}
+
+.icons {
+display: flex;
+align-items: center;
+}
+
+// Hero Styles
 .hero {
-    position: relative;
-    background-image: url("/assets/images/hero-bio.jpg");
-    background-size: cover;
-    background-position: center;
+position: relative;
+background-image: url("/assets/images/hero-bio.jpg");
+background-size: cover;
+background-position: center;
+width: 100%;
+max-width: 100%;
+height: 250px;
+font-family: avenir-regular;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: white;
+
+&__text {
+    font-family: avenir-regular;
+    padding-left: 16px;
+}
+
+&::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     max-width: 100%;
-    height: 250px;
-    font-family: avenir-regular;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    color: white;
-    
-    &__text {
-        font-family: avenir-regular;
-        padding-left: 16px;
-
-    }
-
-    &::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        max-width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
-
-    p {
-        position: relative;
-        z-index: 1;
-    }
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.heading {
-    font-size: 25px;
-    font-family: avenir-regular;
+h1,
+p {
+    position: relative;
+    z-index: 1;
+}
 }
 
+// Main Section Styles
 .main {
-    &__heading {
-        font-size: 25px;
-        font-family: avenir-demi;
-        padding-bottom: 16px;
-    }
+font-family: avenir-regular;
+padding: 20px 16px;
 
-    &__main__caption {
-        font-size: 28px;
-        padding: 1rem 0;
-    }
-
-    &__container-image {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    &__image {
-        max-width: 100%;
-    }
-
-    &__sub-heading {
-        font-size: 20px;
-        font-family: avenir-demi;
-    }
+&__heading {
+    font-size: 25px;
+    font-family: avenir-demi;
+    padding-bottom: 16px;
 }
 
-.photo-gallery {
+h4 {
+    font-size: 18px;
+    padding: 1rem 0;
+}
 
-    &__container {
-        max-width: 100%;
-        display: block;
-        padding: 16px;
-    }
+&__container-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    &__heading {
-        font-family: avenir-demi;
-        font-size: 25px;
-    }
+&__image {
+    max-width: 100%;
+}
+}
 
-    &__photos {
-        display: flex;
-        flex-direction: column;
+// Photo Gallery Styles
+.photo-gallery__container {
+max-width: 100%;
+display: block;
+padding: 16px;
 
-    }
+&__heading {
+    font-family: avenir-demi;
+    font-size: 25px;
+}
+
+&__photos {
+    display: flex;
+    flex-direction: column;
 }
 
 .photo {
     max-width: 100%;
     padding-bottom: 16px;
 }
+}
 
+// Comments Section Styles
 .comments {
-    padding-left: 16px;
+padding: 16px;
+display: flex;
+flex-direction: column;
 
-    &__heading {
-        padding-bottom: 16px;
+&__box {
+    display: flex;
+}
+
+&__heading {
+    padding-bottom: 16px;
+}
+
+&__input-heading {
+    font-family: avenir-demi;
+    font-size: 16px;
     }
 
-    &__input-heading {
-        color: gray;
-        font-family: avenir-demi;
-        font-size: 25px;
+    &__profile-icon {
+        height: 2.5rem;
+        width: 2.5rem;
+        border-radius: 3rem;
+        padding: 1rem;
     }
 }

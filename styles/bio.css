@@ -1,67 +1,69 @@
+@font-face {
+  font-family: avenir-regular;
+  src: url("/assets/fonts/AvenirNextLTPro-Regular.otf");
+}
+@font-face {
+  font-family: avenir-demi;
+  src: url("/assets/fonts/AvenirNextLTPro-Demi.otf");
+}
+@font-face {
+  font-family: avenir-bold;
+  src: url("/assets/fonts/AvenirNextLTPro-Bold.otf");
+}
+* {
+  border: 0;
+  margin: 0;
+}
+
+h1 {
+  font-family: avenir-demi;
+  font-size: 25px;
+}
+
 .header {
   height: 100px;
   width: 100vw;
   max-width: 100%;
   background-color: #323232;
-  color: #E1E1E1;
+  color: #e1e1e1;
   font-family: avenir-regular;
   display: flex;
-
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
-
-
-  
 @media (min-width: 768px) and (max-width: 1279px) {
   .header {
     height: 60px;
   }
 }
-@media (min-width: 1280px) {
-  .header {
-    height: 60px;
-  }
-}
-@media (min-width: 768px) and (max-width: 1279px) {
-  .header__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-self: center;
-  }
 
-  
-}
-@media (min-width: 1280px) {
-  .header__container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-self: center;
-  }
-}
 .header__logo {
   padding: 1rem;
 }
+
 .header__nav {
   display: flex;
-  padding: 0;
-  justify-content: space-around;
 }
-.header__container--nav-items ul {
+
+.header__nav-links {
   list-style: none;
   padding: 0;
   display: flex;
-  justify-content: space-between;
-  width: 100%;
 }
-.header__container--nav-items ul li--nav-items-link {
-  padding-bottom: 15px;
+
+.header__nav-link {
+  padding: 15px;
   text-align: center;
-  color: #E1E1E1;
+  color: #e1e1e1;
   text-decoration: none;
 }
-.header__container--nav-items ul li--nav-items-link:hover {
-  color: #323232;
+.header__nav-link:hover {
+  color: #fff;
+}
+.header__nav-link--active {
+  color: #fff;
+  font-weight: bold;
 }
 
 .footer__container {
@@ -109,6 +111,7 @@
   padding: 1rem;
   display: block;
 }
+
 .footer__container .photo {
   max-width: 100%;
   height: auto;
@@ -121,27 +124,6 @@
 .icons {
   display: flex;
   align-items: center;
-}
-
-@font-face {
-  font-family: avenir-regular;
-  src: url("/assets/fonts/AvenirNextLTPro-Regular.otf");
-}
-@font-face {
-  font-family: avenir-demi;
-  src: url("/assets/fonts/AvenirNextLTPro-Demi.otf");
-}
-@font-face {
-  font-family: avenir-bold;
-  src: url("/assets/fonts/AvenirNextLTPro-Bold.otf");
-}
-* {
-  border: 0;
-  margin: 0;
-}
-* h1 {
-  font-family: avenir-demi;
-  font-size: 25px;
 }
 
 .hero {
@@ -172,14 +154,10 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
 }
-.hero h1, .hero p {
+.hero h1,
+.hero p {
   position: relative;
   z-index: 1;
-}
-
-.heading {
-  font-size: 25px;
-  font-family: avenir-regular;
 }
 
 .main {
@@ -209,16 +187,15 @@
   display: block;
   padding: 16px;
 }
-.photo-gallery__heading {
+.photo-gallery__container__heading {
   font-family: avenir-demi;
   font-size: 25px;
 }
-.photo-gallery__photos {
+.photo-gallery__container__photos {
   display: flex;
   flex-direction: column;
 }
-
-.photo {
+.photo-gallery__container .photo {
   max-width: 100%;
   padding-bottom: 16px;
 }
@@ -228,55 +205,19 @@
   display: flex;
   flex-direction: column;
 }
-
 .comments__box {
   display: flex;
 }
-
 .comments__heading {
   padding-bottom: 16px;
 }
-
 .comments__input-heading {
   font-family: avenir-demi;
   font-size: 16px;
-  color: #afafaf;
-}
-
-.comments__user-image {
-  display: flex;
-  width: 14vw;
-  /* max-width: 100%; */
 }
 .comments__profile-icon {
-  height: 60px;
-  width: 60px;
-  border-radius: 20rem;
-}
-
-.comments__input-heading {
-  padding-bottom: 16px;
-}
-
-.comments__new-comment {
-  display: flex;
-  flex-direction: column;
-  }
-
-.name, .comment {
-  width: 100vw;
-}
-
-.comment__button {
-  background-color: #323232;
-  color: white;
-  display: flex;
-  justify-content: center;
-  border-radius: 0.4rem;
-  font-family: avenir-demi;
-  padding: 0.5rem;
-  font-size: 16px;
-  align-items: center;
-}
-
-/*# sourceMappingURL=bio.css.map */
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 3rem;
+  padding: 1rem;
+}/*# sourceMappingURL=bio.css.map */
