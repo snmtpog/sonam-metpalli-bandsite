@@ -9,9 +9,7 @@
 
 }
 
-* {
-  font-family: avenir;
-  }
+
   
 @media (min-width: 768px) and (max-width: 1279px) {
   .header {
@@ -205,10 +203,6 @@
 .main__image {
   max-width: 100%;
 }
-.main h5 {
-  font-size: 18px;
-  font-family: avenir-demi;
-}
 
 .photo-gallery__container {
   max-width: 100%;
@@ -229,6 +223,60 @@
   padding-bottom: 16px;
 }
 
+.comments {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.comments__box {
+  display: flex;
+}
+
 .comments__heading {
-  padding-left: 16px;
-}/*# sourceMappingURL=bio.css.map */
+  padding-bottom: 16px;
+}
+
+.comments__input-heading {
+  font-family: avenir-demi;
+  font-size: 16px;
+  color: #afafaf;
+}
+
+.comments__user-image {
+  display: flex;
+  width: 14vw;
+  /* max-width: 100%; */
+}
+.comments__profile-icon {
+  height: 60px;
+  width: 60px;
+  border-radius: 20rem;
+}
+
+.comments__input-heading {
+  padding-bottom: 16px;
+}
+
+.comments__new-comment {
+  display: flex;
+  flex-direction: column;
+  }
+
+.name, .comment {
+  width: 100vw;
+}
+
+.comment__button {
+  background-color: #323232;
+  color: white;
+  display: flex;
+  justify-content: center;
+  border-radius: 0.4rem;
+  font-family: avenir-demi;
+  padding: 0.5rem;
+  font-size: 16px;
+  align-items: center;
+}
+
+/*# sourceMappingURL=bio.css.map */
